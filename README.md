@@ -39,19 +39,19 @@ The primary experiments use the **Fakeddit** multimodal fake-news dataset.
 
 The additional evaluation uses **GossipCop** from the **FakeNewsNet** dataset.
 
-The `data_splits/` directory provides the experimental split information corresponding to the experiments reported in the manuscript.
-
-For Fakeddit, the final experimental splits contain:
+For Fakeddit, the `data_splits/` directory contains the final experimental splits used in the main experiments:
 
 - Training: 99,200 samples
 - Validation: 12,400 samples
 - Test: 12,400 samples
 
-For GossipCop, the experimental splits contain:
+For GossipCop, the additional evaluation was conducted using 8,302 multimodal samples with the following stratified experimental partition:
 
 - Training: 6,641 samples
 - Validation: 830 samples
 - Test: 831 samples
+
+The GossipCop experimental split construction is implemented in `03_gossipcop_additional_evaluation.ipynb` using a fixed random seed for reproducibility.
 
 The original third-party datasets and associated images are not redistributed in this repository. Users should obtain the datasets from their respective original sources.
 
@@ -77,7 +77,7 @@ The repository documents the experimental workflow used in the study, including:
 
 Random seeds and major training hyperparameters are specified directly in the notebooks where applicable.
 
-The `data_splits/` directory provides the split information corresponding to the experiments reported in the manuscript.
+The `data_splits/` directory contains the Fakeddit train, validation, and test splits used in the main experiments. The GossipCop experimental partitioning is defined programmatically in the additional evaluation notebook.
 
 ## HGR+++
 
@@ -87,7 +87,7 @@ The model combines CLIP-based text and image representations with contextual inf
 
 ## Code Availability
 
-The notebooks and experimental split information provided in this repository are intended to support reproducibility of the experiments and analyses reported in the manuscript.
+The notebooks, experimental configurations, and Fakeddit split information provided in this repository are intended to support reproducibility of the experiments and analyses reported in the manuscript.
 
 ## Citation
 
