@@ -31,7 +31,7 @@ Contains additional experiments and verification analyses performed during manus
 
 **`03_gossipcop_additional_evaluation.ipynb`**
 
-Contains the additional binary fake-news evaluation using the GossipCop dataset from FakeNewsNet. The notebook includes image validation, stratified train/validation/test splitting, HGR+++ training, and final evaluation.
+Contains the additional binary fake-news evaluation using the GossipCop dataset from FakeNewsNet, including experimental data handling, stratified train/validation/test splitting, HGR+++ training, and final evaluation.
 
 ## Datasets
 
@@ -39,7 +39,21 @@ The primary experiments use the **Fakeddit** multimodal fake-news dataset.
 
 The additional evaluation uses **GossipCop** from the **FakeNewsNet** dataset.
 
-The original third-party datasets and raw images are not redistributed in this repository. Users should obtain the datasets from their respective original sources.
+The `data_splits/` directory provides the experimental split information corresponding to the experiments reported in the manuscript.
+
+For Fakeddit, the final experimental splits contain:
+
+- Training: 99,200 samples
+- Validation: 12,400 samples
+- Test: 12,400 samples
+
+For GossipCop, the experimental splits contain:
+
+- Training: 6,641 samples
+- Validation: 830 samples
+- Test: 831 samples
+
+The original third-party datasets and associated images are not redistributed in this repository. Users should obtain the datasets from their respective original sources.
 
 ## Execution Environment
 
@@ -49,18 +63,21 @@ For reproducibility, the notebooks retain the Kaggle input paths used during the
 
 ## Reproducibility
 
-The notebooks document the experimental workflow used in the study, including:
+The repository documents the experimental workflow used in the study, including:
 
-- dataset preparation and preprocessing
+- Fakeddit data preparation and experimental split construction
 - multimodal feature processing
 - HGR+++ model implementation
 - training configuration
 - evaluation procedures
 - metadata-related analyses
 - leakage and near-duplicate sensitivity analyses
-- additional GossipCop evaluation
+- GossipCop experimental split construction
+- additional GossipCop training and evaluation
 
 Random seeds and major training hyperparameters are specified directly in the notebooks where applicable.
+
+The `data_splits/` directory provides the split information corresponding to the experiments reported in the manuscript.
 
 ## HGR+++
 
@@ -70,7 +87,7 @@ The model combines CLIP-based text and image representations with contextual inf
 
 ## Code Availability
 
-The notebooks in this repository are provided to support reproducibility of the experiments and analyses reported in the manuscript.
+The notebooks and experimental split information provided in this repository are intended to support reproducibility of the experiments and analyses reported in the manuscript.
 
 ## Citation
 
